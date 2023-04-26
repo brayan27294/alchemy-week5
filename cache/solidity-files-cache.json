@@ -1,0 +1,75 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/Brayan.Gonzalez.Marchena/Documents/Course/Blockchain course/Alchemy/escrow-hardhat/contracts/Escrow.sol": {
+      "lastModificationDate": 1682485489198,
+      "contentHash": "3d840730409e666e9ad7a335b7209f4d",
+      "sourceName": "contracts/Escrow.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "Escrow"
+      ]
+    },
+    "/Users/Brayan.Gonzalez.Marchena/Documents/Course/Blockchain course/Alchemy/alchemy-week5/contracts/Escrow.sol": {
+      "lastModificationDate": 1682487314661,
+      "contentHash": "3d840730409e666e9ad7a335b7209f4d",
+      "sourceName": "contracts/Escrow.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.17"
+      ],
+      "artifacts": [
+        "Escrow"
+      ]
+    }
+  }
+}
