@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { GlobalProvider } from './modules/GlobalContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,7 +16,9 @@ if (!window.ethereum) {
 } else {
   root.render(
     <React.StrictMode>
-      <App />
+      <GlobalProvider>
+        <App />
+      </GlobalProvider>
     </React.StrictMode>
   );
 }
