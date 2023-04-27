@@ -7,6 +7,7 @@ This is an Escrow Dapp built with [Hardhat](https://hardhat.org/).
 There are three top-level folders:
 
 1. `/app` - contains the front-end application
+1. `/server` - contains the back-end application
 2. `/contracts` - contains the solidity contract
 3. `/tests` - contains tests for the solidity contract
 
@@ -23,4 +24,10 @@ Compile the contracts using `npx hardhat compile`. The artifacts will be placed 
 `cd` into the `/app` directory and run `npm install`
 
 To run the front-end application run `npm start` from the `/app` directory. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Back-End
+
+`cd` into the `/server` directory and run `npm install`
+
+To run the front-end application run `npm start` from the `/server` directory. Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
 
