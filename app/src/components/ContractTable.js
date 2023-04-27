@@ -10,7 +10,7 @@ const columns = (approveHandler, currentContract, submit) => [
     { field: 'address', headerName: 'Contract Address', width: 350 },
     { field: 'arbiter', headerName: 'Arbiter Address', width: 350 },
     { field: 'beneficiary', headerName: 'Beneficiary Address', width: 350 },
-    { field: 'deposit', headerName: 'Deposit Amount (ETH)', width: 200 },
+    { field: 'deposit', headerName: 'Deposit Amount (ETH)', width: 200, renderCell: (params) => (params.row.deposit?.hex ? (parseInt(params.row.deposit?.hex, 16)/ 10**18) : '') },
     {
         field: 'approved',
         headerName: 'Actions',

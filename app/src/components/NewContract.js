@@ -3,6 +3,7 @@ import { Alert, Button, CircularProgress, Grid, TextField } from '@mui/material'
 import { GlobalContext } from '../modules/GlobalContext';
 import { deploy } from '../utils/contractHelper';
 import { storeContract } from '../utils/axiosHelper';
+import { ethers } from 'ethers';
 
 const initialState = {
     arbiter: '',
@@ -34,15 +35,16 @@ const NewContract = () => {
         setMessage({});
         if(arbiter && beneficiary && amount){
             setSubmitting(true);
+            const etherAmount = ethers.utils.parseEther(amount);
             let contract;
             try{
-                contract = await deploy(signer, arbiter, beneficiary, amount);
+                contract = await deploy(signer, arbiter, beneficiary, etherAmount);
             }catch(e){
                 setMessage({ type: 'error', message: 'Something went wrong deploying the contract'});
             };
             if(contract){
                 try{
-                    const contracts = await storeContract({ arbiter, beneficiary, deposit: amount, approved: false, address: contract.address });
+                    const contracts = await storeContract({ arbiter, beneficiary, deposit: etherAmount, approved: false, address: contract.address });
                     dispatch({ 
                         payload: contracts,
                         type: "FETCH_CONTRACTS"
@@ -100,7 +102,7 @@ const NewContract = () => {
                     type='number'
                     name='amount'
                     margin='dense'
-                    label='Deposit Amount (in Wei)'
+                    label='Deposit Amount (in ETH)'
                     variant='standard'
                     value={contractForm.amount}
                     onChange={handleChange}
